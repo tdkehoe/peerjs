@@ -65,3 +65,15 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 }
 
 
+/* Tic-tac-toe */
+
+.square {
+	width: 100px;
+	height: 100px;
+	font-size: 48pt;
+	text-align: center;
+}
+
+.winner {
+	color: red;
+}
