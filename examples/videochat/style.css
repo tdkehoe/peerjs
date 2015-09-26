@@ -77,3 +77,22 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 .winner {
 	color: red;
 }
+
+.cbmt {
+  width: 400px;
+}
+
+.cbmt-text {
+  color: white;
+  background-color: black;
+  padding: 25px;
+  font-size: 18pt;
+}
+
+.next {
+  color: white;
+  background-color: red;
+  text-align: center;
+  padding: 10px;
+  font-size: 16pt;
+}

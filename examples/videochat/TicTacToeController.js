@@ -4,6 +4,7 @@ function($scope, $firebaseObject) {
   var ref = new Firebase("https://tdk-tic-tac-toe.firebaseio.com/");
   var board = $firebaseObject(ref);
   board.$bindTo($scope, "board").then(function() {
+    $scope.board.showTicTacToe = false;
     // initialize board counters
     $scope.board.row1x = 0;
     $scope.board.row2x = 0;
