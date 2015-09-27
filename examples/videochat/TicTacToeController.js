@@ -46,7 +46,7 @@ function($scope, $firebaseObject) {
         $scope.board.columnCx === 3 ||
         $scope.board.diagonal1x === 3 ||
         $scope.board.diagonal2x === 3) {
-          $scope.board.winner = "X wins!";
+          $scope.board.winner = "X wins! New game?";
           $scope.board.cat = false;
       } else if ($scope.board.row1o === 3 ||
         $scope.board.row2o === 3 ||
@@ -56,10 +56,10 @@ function($scope, $firebaseObject) {
         $scope.board.columnCo === 3 ||
         $scope.board.diagonal1o === 3 ||
         $scope.board.diagonal2o === 3) {
-          $scope.board.winner = "O wins!";
+          $scope.board.winner = "O wins! New game?";
           $scope.board.cat = false;
       } else if ($scope.board.counter === 9 && $scope.board.cat === true) {
-        $scope.board.winner = "Cat's game.";
+        $scope.board.winner = "Cat's game. New game?";
       }
     };
     // listen for clicks
@@ -227,6 +227,38 @@ function($scope, $firebaseObject) {
       }
       winner();
     };
+
+    $scope.newGame = function() {
+      $scope.board.row1x = 0;
+      $scope.board.row2x = 0;
+      $scope.board.row3x = 0;
+      $scope.board.columnAx = 0;
+      $scope.board.columnBx = 0;
+      $scope.board.columnCx = 0;
+      $scope.board.diagonal1x = 0;
+      $scope.board.diagonal2x = 0;
+      $scope.board.row1o = 0;
+      $scope.board.row2o = 0;
+      $scope.board.row3o = 0;
+      $scope.board.columnAo = 0;
+      $scope.board.columnBo = 0;
+      $scope.board.columnCo = 0;
+      $scope.board.diagonal1o = 0;
+      $scope.board.diagonal2o = 0;
+      $scope.board.counter = 0;
+      $scope.board.cat = true;
+      // initialize squares
+      $scope.board.sq1a = '';
+      $scope.board.sq1b = '';
+      $scope.board.sq1c = '';
+      $scope.board.sq2a = '';
+      $scope.board.sq2b = '';
+      $scope.board.sq2c = '';
+      $scope.board.sq3a = '';
+      $scope.board.sq3b = '';
+      $scope.board.sq3c = '';
+      $scope.board.winner = '';
+    }
 
   });
 }]);
