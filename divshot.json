@@ -1,0 +1,6 @@
+{
+  "name": "capstone-project",
+  "root": "./",
+  "clean_urls": false,
+  "error_page": "error.html"
+}

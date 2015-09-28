@@ -1,0 +1,41 @@
+My name is Thomas David Kehoe. Humans do almost all activities with other humans, except using websites. I believe that in the future when you visit a website there will be other people there.
+
+Specifically, my company makes technology for speech clinics. We have an iPhone app for stuttering therapy that's highly effective but I hate using it. You have to talk to yourself, alone, for two to three hours every day. I want a website where I can see who else is online, see who wants to do the same therapy I want to do, then we open a video window, open a therapy module, and work through the exercises together.
+
+My brother is a Ruby on Rails guru so I asked him how hard it'd be to build a collaborative therapy website. He thought it was a good idea, and that two or three developers could build it in six months. I thought, sounds like a good capstone project!
+
+I first tried Google Hangout Apps. The video conferencing works fine but Google's remote database is, well, let's just say calling it a database is generous.
+
+I then looked at more than a dozen other video conferencing APIs. All have video, audio, text chat, file sharing, screen sharing, etc., but none have collaborative shared apps. Seeing a blue ocean next to a red ocean increased my interest in this project.
+
+(A red ocean is a competitive market with many companies making similar products. A blue ocean is a market with no competitors. Video conferencing is a red ocean, but collaborative shared apps is a blue ocean.)
+
+For video conferencing I chose the WebRTC standard, using the PeerJS library.
+
+I chose Firebase for the database. Firebase is a joy to use, it automatically binds data between each users and the remote database.
+
+Firebase also has a user presence library, showing you who's online.
+
+I wrote a few shared JavaScript programs. This one is cognitive bias modification therapy exercises for social anxiety disorder. Behavioral therapy for depression, anxiety, and addiction are therapies patients want to do with other people.
+
+You code also learn JavaScript. Code School would be more fun if you could find a partner on their website to work through the exercises.
+
+You could find a partner for learning Spanish.
+
+Online stores could have salespeople to help you. "Mr. Gray, I see that you like black t-shirts. May I suggest this jacket?"
+
+I'm sure you all have other ideas for collobarative apps so I'll end there!
+
+
+Zayo
+ConfidentFS.com
+Recurly
+Kapta
+Hired.com
+MagpieSW.com
+CacheMatrix.com
+TeamSnap.com
+Pivotal
+FluidConsultingServices.com
+RaptMedia
+Kapost

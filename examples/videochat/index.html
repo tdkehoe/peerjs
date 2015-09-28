@@ -96,7 +96,20 @@
         </div>
 
         <div style="width: 50%; float: right">
-          <h2>PeerJS Video Chat</h2>
+          <h2>Collaborative Apps with Video Conferencing and Presence</h2>
+          <h3>Thomas David Kehoe</h3>
+          <ul class="techList">
+            <li>WebRTC with PeerJS video conferencing library</li>
+            <li>JavaScript shared apps run in each browser</li>
+            <li>Firebase remote database</li>
+            <li>Three-way binding instantly updates data changes between users</li>
+            <li>Firebase user presence library</li>
+            <li>AngularJS front end framework</li>
+          </ul>
+
+          <!-- Presence -->
+          <div id="presenceDiv" class="l-demo-container example-base" ng-controller="PresenceController"></div>
+
 
           <!-- Get local audio/video stream -->
           <div id="step1">
@@ -124,7 +137,6 @@
             <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
           </div>
 
-          <div id="presenceDiv" class="l-demo-container example-base" ng-controller="PresenceController"></div>
         </div>
       </div>
     </div>
@@ -133,7 +145,7 @@
     <div class="pure-u-1-3">
 
       <div ng-controller="TicTacToeController">
-        <a href ng-click="board.showTicTacToe = !board.showTicTacToe" ng-hide="board.showTicTacToe">Show Tic-Tac-Toe</a>
+        <a href ng-click="board.showTicTacToe = !board.showTicTacToe" ng-hide="board.showTicTacToe">Tic-Tac-Toe</a>
         <a href ng-click="board.showTicTacToe = !board.showTicTacToe" ng-show="board.showTicTacToe">Hide Tic-Tac-Toe</a>
         <div ng-show="board.showTicTacToe">
           <h1>Firebase Tic-Tac-Toe</h1>
@@ -161,7 +173,7 @@
       </div>
 
       <div ng-controller="CBMTController" class="cbmt">
-        <a href ng-click="board.showCBMT = !board.showCBMT" ng-hide="board.showCBMT">Show Cognitive Bias Modifcation Therapy (CBMT)</a>
+        <a href ng-click="board.showCBMT = !board.showCBMT" ng-hide="board.showCBMT">Cognitive Bias Modifcation Therapy (CBMT)</a>
         <a href ng-click="board.showCBMT = !board.showCBMT" ng-show="board.showCBMT">Hide Cognitive Bias Modifcation Therapy (CBMT)</a>
         <div ng-show="board.showCBMT">
           <h1>Cognitive Bias Modification Therapy (CBMT)</h1>
@@ -182,13 +194,103 @@
         </div>
       </div>
 
-    </div>
-  </div>
+
+      <div ng-controller="LearnJSController" class="cbmt">
+        <a href ng-click="board.showLearnJS = !board.showLearnJS" ng-hide="board.showLearnJS">Learn JavaScript</a>
+        <a href ng-click="board.showLearnJS = !board.showLearnJS" ng-show="board.showLearnJS">Hide Learn JavaScript</a>
+        <div ng-show="board.showLearnJS">
+          <h1>Learn JavaScript</h1>
+
+          <div ng-show="board.showForLoop">
+            <div>Which of the following are JavaScript data types:<br></br>
+              <input type=checkbox name="boolean" ng-model="boolean"><strong>Boolean:</strong> true or false <span ng-show="boolean" class="success">Success! ★</span><br></br>
+              <input type=checkbox name="nulltype" ng-model="nulltype"><strong>Null:</strong> no object value is present <span ng-show="nulltype" class="success">Success! ★</span><br></br>
+              <input type=checkbox name="undefinedtype" ng-model="undefinedtype"><strong>Undefined:</strong> the value of a new variable before a value is declared <span ng-show="undefinedtype" class="success">Success! ★</span><br></br>
+              <input type=checkbox name="number" ng-model="number"><strong>Number:</strong> numeric data type <span ng-show="number" class="success">Success! ★</span><br></br>
+              <input type=checkbox name="string" ng-model="string"><strong>'String':</strong> a sequence of characters between quotes, representing text <span ng-show="string" class="success">Success! ★</span><br></br>
+              <input type=checkbox name="symbol" ng-model="symbol"><strong>Symbol:</strong> a unique and immutable value <span ng-show="symbol" class="success">Success! ★</span><br></br>
+              <input type=checkbox name="awesome" ng-model="awesome"><strong>!Awesome!:</strong> any shit you type between exclamation points is awesome! <span ng-show="awesome" class="wrong">Wrong! <strong>☓</strong></span><br></br>
+            <div class="next" ng-click="board.showForLoop = !board.showForLoop">Next</div>
+          </div>
+
+          <div ng-hide="board.showForLoop">
+            <div class="learnJS-text"><strong><em>for</em></strong> loops take three arguments: the counter's initial value, the counter's final value, and a incrementer value. Write the arguments for this <em>for</em> loop:</div>
+
+              <form>
+                <input type="text" placeholder="for (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) { }" ng-model="forLoopAnswer" ng-class="{ 'text-green' : (forLoopAnswer == 'for(i = 0; i < array.length; i++) { }'), 'text-red' : (forLoopAnswer != 'for(i = 0; i < array.length; i++) { }}" size="35"></input>
+              </form>
+
+              <div ng-show="forLoopAnswer == 'for(i = 0; i < array.length; i++) { }'" class="success">Success! ★</div>
+
+            <div class="next" ng-click="!board.showForLoop = board.showForLoop">Next</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div ng-controller="LearnSpanishController" class="cbmt">
+        <a href ng-click="board.showLearnSpanish = !board.showLearnSpanish" ng-hide="board.showLearnSpanish">Learn Spanish</a>
+        <a href ng-click="board.showLearnSpanish = !board.showLearnSpanish" ng-show="board.showLearnSpanish">Hide Learn Spanish</a>
+        <div ng-show="board.showLearnSpanish">
+          <h1>Learn Spanish</h1>
+
+          <div ng-show="board.showTeQuieroMucho">
+            <div><img src="cuba.png" alt="Cuba" width="400px"></div>
+            <div>In Cuba, the phrase <em><strong>te quiero mucho</strong></em> means<br>
+              <form>
+                <p><input type="radio" ng-model="justmet" value="justmet" class="answers"> <em>"I have just met you and I love you!"</em> <span ng-show="justmet" class="success">Success! ★</span></p>
+                <p><input type="radio" ng-model="sex" value="sex" class="answers"> <em>"I want to have sex with you."</em> <span ng-show="sex" class="success">Success! ★</span></p>
+                <p><input type="radio" ng-model="island" value="island" class="answers"> <em>"I really want to get off this island."</em> <span ng-show="island" class="success">Success! ★</span></p>
+                <p><input type="radio" ng-model="all1" value="all1"> All of the above <span ng-show="all1" class="success">Success! ★ ★ ★</span><p>
+              </form>
+            <div class="next" ng-click="board.showTeQuieroMucho = !board.showTeQuieroMucho">Next</div>
+            </div>
+          </div>
+
+          <div ng-hide="board.showTeQuieroMucho">
+            <div><img src="mexico.gif" alt="Mexico" width="400px"></div>
+            <div>In Mexico, the word <em><strong>mañana</strong></em> means<br>
+              <form>
+                <p><input type="radio" ng-model="tips" value="tips" class="answers"> <em>"We accept tips."</em> <span ng-show="tips" class="success">Success! ★</span></p>
+                <p><input type="radio" ng-model="highschoolSpanish" value="highschoolSpanish" class="answers"> <em>"I understood your high school Spanish perfectly."</em> <span ng-show="highschoolSpanish" class="success">Success! ★</span></p>
+                <p><input type="radio" ng-model="sixmonths" value="sixmonths"class="answers"> <em>"Six months, maybe."</em> <span ng-show="sixmonths" class="success">Success! ★</span></p>
+                <p><input type="radio" ng-model="all2" value="all2"> All of the above <span ng-show="all2" class="success">Success! ★ ★ ★</span><p>
+              </form>
+            <div class="next" ng-click="board.showTeQuieroMucho = !board.showTeQuieroMucho">Next</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div ng-controller="ShoppingController" class="cbmt">
+        <a href ng-click="board.showShopping = !board.showShopping" ng-hide="board.showShopping">Shopping</a>
+        <a href ng-click="board.showShopping = !board.showShopping" ng-show="board.showShopping">Hide Shopping</a>
+        <div ng-show="board.showShopping">
+          <!-- <div><img src="comme-des-garcons.jpg" alt="John-Waters" width="400px"></div> -->
+
+          <div ng-show="board.showJohnWaters">
+            <div><img src="John-Waters.jpg" alt="John-Waters" width="400px"></div>
+            <div class="next" ng-click="board.showJohnWaters = !board.showJohnWaters">Next</div>
+          </div>
+
+          <div ng-hide="board.showJohnWaters">
+            <div><img src="JohnWatersReunion2011012.jpg" alt="JohnWatersReunion" width="400px"></div>
+            <div class="next" ng-click="board.showJohnWaters = !board.showJohnWaters">Next</div>
+          </div>
+
+        </div>
+      </div>
+
+
 
   <script type="text/javascript" src="app.js"></script>
   <script type="text/javascript" src="routes.js"></script>
   <script type="text/javascript" src="TicTacToeController.js"></script>
   <script type="text/javascript" src="CBMTController.js"></script>
   <script type="text/javascript" src="PresenceController.js"></script>
+  <script type="text/javascript" src="LearnJSController.js"></script>
+  <script type="text/javascript" src="LearnSpanishController.js"></script>
+  <script type="text/javascript" src="ShoppingController.js"></script>
 </body>
 </html>

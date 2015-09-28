@@ -53,7 +53,8 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 }
 
 #video-container {
-  padding: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
   text-align: center;
 }
 
@@ -95,4 +96,41 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
   text-align: center;
   padding: 10px;
   font-size: 16pt;
+}
+
+.success {
+  color: gold;
+  font-size: 14pt;
+}
+
+.wrong {
+  color: red;
+  font-size: 14pt;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-green {
+  color: green
+}
+
+.techList {
+  text-align: left;
+}
+
+.answers {
+  font-style: italic;
+}
+
+.example-base {
+  font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #333;
+}
+
+.l-demo-container {
+  width: 500px;
+  margin: 20px auto 0px auto;
+  color: green;
 }
